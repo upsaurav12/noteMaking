@@ -11,12 +11,14 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.15",
+    "quill": "^2.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwindcss": "^4.0.15"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
+    "@tailwindcss/typography": "^0.5.16",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react-swc": "^3.8.0",
