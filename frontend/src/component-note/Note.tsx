@@ -1,6 +1,9 @@
 import { useContext, useState, useRef, useEffect } from "react";
 import { ThemeContext } from "../context/Theme";
 import Quill from "quill";
+import React from "react";
+import axios from 'axios'
+
 import "quill/dist/quill.snow.css";
 
 interface Note {
@@ -41,9 +44,18 @@ export const Note = () => {
     console.log(theme)
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!content.trim()) return;
+
+
+    try {
+      const response = await axios.post('http://localhost:5000/notes' , {content})
+
+      console.log(response)
+    } catch (error) {
+      console.error(error.message)
+    }
     setNote((prev) => [...prev, { content }]);
     setContent(""); // Reset editor
   };

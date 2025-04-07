@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import './App.css';
 import { Note } from './component-note/Note';
 import { ThemeContext } from './context/Theme';
+import React from 'react';
 
 function App() {
     const themeState = useContext(ThemeContext);

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "quill/dist/quill.snow.css";
 import Quill from "quill";
+import React from "react";
 
 export const NoteEditor = () => {
   const editorRef = useRef<HTMLDivElement | null>(null);
