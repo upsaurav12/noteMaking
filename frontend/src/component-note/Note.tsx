@@ -54,7 +54,7 @@ export const Note = () => {
 
       console.log(response)
     } catch (error) {
-      console.error(error.message)
+      console.error(error)
     }
     setNote((prev) => [...prev, { content }]);
     setContent(""); // Reset editor
